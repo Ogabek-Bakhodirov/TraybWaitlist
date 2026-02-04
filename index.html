@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trayb - O‘quv markazlar uchun innovatsion ta’lim platformasi</title>
+    <meta name="description" content="O‘quvchilarning natijasini yaxshilashga yordam beruvchi zamonaviy yondashuv.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="#" class="logo">Trayb</a>
+                <a href="#waitlist" class="btn btn-sm">Kirish uchun yozilish</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <span class="badge">Tez orada ishga tushadi</span>
+                    <h1 class="hero-title">O‘quv markazlar uchun <br> <span class="text-gradient">innovatsion ta’lim
+                            platformasi</span></h1>
+                    <p class="hero-desc">O‘quvchilarning natijasini yaxshilashga yordam beruvchi zamonaviy yondashuv.
+                        Savdo yoki CRM emas — haqiqiy ta’lim sifati uchun.</p>
+                    <a href="#waitlist" class="btn btn-primary">Platformaga qiziqish bildirish</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem Section -->
+        <section class="problem">
+            <div class="container">
+                <h2 class="section-title">Nega natijalar tushib ketmoqda?</h2>
+                <div class="grid-3">
+                    <div class="card">
+                        <div class="icon">📉</div>
+                        <h3>Motivatsiya pasayishi</h3>
+                        <p>O‘quvchilar o‘quv jarayonida qiziqishni yo‘qotib, maqsaddan chalg‘iydilar.</p>
+                    </div>
+                    <div class="card">
+                        <div class="icon">👁️</div>
+                        <h3>Nazorat yetishmasligi</h3>
+                        <p>O‘quvchining haqiqiy o‘zlashtirish darajasi va bo‘shliqlari o‘z vaqtida aniqlanmaydi.</p>
+                    </div>
+                    <div class="card">
+                        <div class="icon">🔌</div>
+                        <h3>Aloqa uzilishi</h3>
+                        <p>Darsdan tashqari vaqtda o‘qituvchi va o‘quvchi o‘rtasida samarali muloqot yo‘q.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solution Section -->
+        <section class="solution">
+            <div class="container">
+                <div class="solution-content">
+                    <h2 class="section-title">Trayb qanday yordam beradi?</h2>
+                    <ul class="feature-list">
+                        <li>
+                            <span class="check">✓</span>
+                            <div>
+                                <h3>Rivojlanishni kuzatish</h3>
+                                <p>Har bir o‘quvchining dinamikasini raqamli tahlil qilish imkoniyati.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="check">✓</span>
+                            <div>
+                                <h3>Tizimlashtirilgan ta’lim</h3>
+                                <p>Tartibsiz jarayonlarni aniq va o‘lchanadigan tizimga aylantirish.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="check">✓</span>
+                            <div>
+                                <h3>Natijaga yo‘naltirilganlik</h3>
+                                <p>Shunchaki qatnashish emas, balki real bilim o‘sishiga fokus qaratish.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Audience Section -->
+        <section class="audience">
+            <div class="container">
+                <h2 class="section-title">Kimlar uchun?</h2>
+                <div class="tags-wrapper">
+                    <span class="tag">O‘quv markaz egalari</span>
+                    <span class="tag">Metodistlar</span>
+                    <span class="tag">O‘qituvchilar jamoasi</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Waitlist Form Section -->
+        <section id="waitlist" class="waitlist">
+            <div class="container">
+                <div class="form-wrapper">
+                    <h2 class="form-title">Trayb platformasiga erta kirish</h2>
+                    <p class="form-desc">Agar siz o‘quv markazingizda real natijani oshirishni istasangiz, ma’lumot
+                        qoldiring. Biz siz bilan bog‘lanamiz.</p>
+
+                    <form name="waitlist" method="POST" data-netlify="true" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Ism va familiya</label>
+                            <input type="text" id="name" name="name" placeholder="Ismingizni kiriting" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Telefon raqam</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+998 90 123 45 67" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="center">O‘quv markaz nomi</label>
+                            <input type="text" id="center" name="center" placeholder="Markaz nomini kiriting" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="role">Lavozimi</label>
+                            <input type="text" id="role" name="role" placeholder="Masalan: Direktor, Metodist" required>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">So‘rov yuborish</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Trayb © 2026. Barcha huquqlar himoyalangan.</p>
+            <p class="footer-note">Tez orada ishga tushadi</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
