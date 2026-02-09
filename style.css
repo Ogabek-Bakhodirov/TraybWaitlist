@@ -433,6 +433,38 @@ h3 {
     box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
+/* Form Messages */
+.form-message {
+    margin-top: 16px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 0.925rem;
+    text-align: center;
+    display: none;
+}
+
+.form-message:not(:empty) {
+    display: block;
+}
+
+.form-message.success {
+    background-color: #dcfce7;
+    color: #15803d;
+    border: 1px solid #bbf7d0;
+}
+
+.form-message.error {
+    background-color: #fef2f2;
+    color: #dc2626;
+    border: 1px solid #fecaca;
+}
+
+.btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
 /* Footer */
 .footer {
     padding: 60px 0 40px;
