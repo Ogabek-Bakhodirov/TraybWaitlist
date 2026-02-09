@@ -123,6 +123,7 @@
                         <div class="form-group">
                             <label for="phone">Telefon raqam</label>
                             <input type="tel" id="phone" name="phone" placeholder="+998 90 123 45 67" required>
+                            <span id="phone-error" class="field-error"></span>
                         </div>
 
                         <div class="form-group">
@@ -151,11 +152,57 @@
     </footer>
 
     <script>
+        // Telefon raqamni formatlash va validatsiya
+        function formatPhone(value) {
+            let digits = value.replace(/\D/g, '');
+            if (digits.startsWith('998')) {
+                digits = digits.substring(3);
+            }
+            if (digits.length > 9) digits = digits.substring(0, 9);
+
+            let formatted = '+998';
+            if (digits.length > 0) formatted += ' ' + digits.substring(0, 2);
+            if (digits.length > 2) formatted += ' ' + digits.substring(2, 5);
+            if (digits.length > 5) formatted += ' ' + digits.substring(5, 7);
+            if (digits.length > 7) formatted += ' ' + digits.substring(7, 9);
+            return formatted;
+        }
+
+        function validatePhone(phone) {
+            const digits = phone.replace(/\D/g, '');
+            return digits.length === 12 && digits.startsWith('998');
+        }
+
+        const phoneInput = document.getElementById('phone');
+        const phoneError = document.getElementById('phone-error');
+
+        phoneInput.addEventListener('input', function (e) {
+            const formatted = formatPhone(e.target.value);
+            e.target.value = formatted;
+
+            if (formatted.length > 4 && !validatePhone(formatted)) {
+                phoneError.textContent = 'To\'liq raqam kiriting: +998 XX XXX XX XX';
+                phoneInput.classList.add('input-error');
+            } else {
+                phoneError.textContent = '';
+                phoneInput.classList.remove('input-error');
+            }
+        });
+
         document.getElementById('waitlist-form').addEventListener('submit', async function (e) {
             e.preventDefault();
 
             const submitBtn = document.getElementById('submit-btn');
             const formMessage = document.getElementById('form-message');
+            const phone = document.getElementById('phone').value;
+
+            // Telefon validatsiyasi
+            if (!validatePhone(phone)) {
+                phoneError.textContent = 'Telefon raqam noto\'g\'ri. +998 XX XXX XX XX formatida kiriting.';
+                phoneInput.classList.add('input-error');
+                phoneInput.focus();
+                return;
+            }
 
             submitBtn.disabled = true;
             submitBtn.textContent = 'Yuborilmoqda...';
