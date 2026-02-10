@@ -1,9 +1,0 @@
-{
-    "redirects": [
-        {
-            "source": "/(.*)",
-            "destination": "https://trayb.uz/$1",
-            "permanent": true
-        }
-    ]
-}
